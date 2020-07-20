@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CarTrack</string>
+    <string name="enter_message_name">Enter Your Username</string>
+    <string name="enter_message_email">Enter Your Email</string>
+    <string name="enter_message_mobile">Enter Your Mobile No</string>
+    <string name="enter_message_password">Enter Your Password</string>
+    <string name="register_now">Register Now</string>
+    <string name="login_now">Login Now</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="not_register">Not Register? click Here</string>
+
+    <string name="username">Username : </string>
+    <string name="email">Email : </string>
+    <string name="phone">Phone : </string>
+    <string name="company_name">Company Name : </string>
+    <string name="address">Address : </string>
+    <string name="website">Website : </string>
+    <string name="catch_phrase">Catch Phrase : </string>
+    <string name="bs">Bs : </string>
+
+</resources>
