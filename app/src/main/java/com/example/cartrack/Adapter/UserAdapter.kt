@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -39,6 +40,8 @@ class UserAdapter(private val context: Context, private val usersList: List<User
         holder.tvWebsite.text = usersList[position]!!.website
         holder.tvCatchPhrase.text = usersList[position]!!.company!!.catchPhrase
         holder.tvBs.text = usersList[position]!!.company!!.bs
+
+        //click whole card view to view map
         holder.setItemClickListener(object : ItemClickListener {
             override fun onItemClickListener(view: View?, position: Int) {
                 userSelected = usersList[position]
@@ -47,6 +50,14 @@ class UserAdapter(private val context: Context, private val usersList: List<User
                 context.startActivity(i)
             }
         })
+
+        //click btn to view map
+        holder.btnMap.setOnClickListener {
+            userSelected = usersList[position]
+            val i = Intent(context, DisplayMapActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            context.startActivity(i)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -62,6 +73,7 @@ class UserAdapter(private val context: Context, private val usersList: List<User
         var tvWebsite: TextView = itemView.findViewById(R.id.tv_website)
         var tvCatchPhrase: TextView = itemView.findViewById(R.id.tv_catch_phrase)
         var tvBs: TextView = itemView.findViewById(R.id.tv_bs)
+        var btnMap: Button = itemView.findViewById(R.id.btn_location)
 
         private var itemClickListener: ItemClickListener? = null
 

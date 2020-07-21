@@ -1,5 +1,6 @@
 package com.example.cartrack
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cartrack.Database.DatabaseHelper
 import com.hbb20.CountryCodePicker
+import dmax.dialog.SpotsDialog
 
 class LoginActivity : AppCompatActivity() {
 
@@ -72,9 +74,15 @@ class LoginActivity : AppCompatActivity() {
                     phone = ccp!!.fullNumber
                     val status = databaseHelper!!.getLoginData(username, password, phone).toInt()
                     if (status > 0) {
-                        Toast.makeText(applicationContext, "Login Successfully", Toast.LENGTH_LONG).show()
+                        SpotsDialog.Builder()
+                                .setContext(this)
+                                .setTheme(R.style.Custom)
+                                .setCancelable(false)
+                                .build()
+                                .show()
                         val i = Intent(applicationContext, HomePageActivity::class.java)
                         startActivity(i)
+                        finish()
                     } else {
                         Toast.makeText(applicationContext, "You are not Registerd!", Toast.LENGTH_LONG).show()
                     }
@@ -85,10 +93,4 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-
-//    private fun resetEditText() {
-//        etUsername!!.text.clear()
-//        etPassword!!.text.clear()
-//        etphone!!.text.clear()
-//    }
 }

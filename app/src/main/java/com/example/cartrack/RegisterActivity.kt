@@ -73,6 +73,7 @@ class RegisterActivity : AppCompatActivity() {
                        Toast.makeText(applicationContext, "Registration Successfully", Toast.LENGTH_LONG).show()
                        val i = Intent(applicationContext, LoginActivity::class.java)
                        startActivity(i)
+                       finish()
                    } else {
                        Toast.makeText(applicationContext, "You are not Registerd!", Toast.LENGTH_LONG).show()
                    }

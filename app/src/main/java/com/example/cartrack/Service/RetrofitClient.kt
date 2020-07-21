@@ -1,11 +1,11 @@
 package com.example.cartrack.Service
 
+import com.example.cartrack.Common.Common.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     private var retrofit: Retrofit? = null
-    private const val BASE_URL = "https://jsonplaceholder.typicode.com"
 
     @JvmStatic
     val retrofitInstance: Retrofit?

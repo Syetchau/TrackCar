@@ -43,6 +43,9 @@ dependencies {
     //google map place
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 
+    //spot dialog
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
 }
 repositories {
     mavenCentral()

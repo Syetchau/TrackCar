@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    var btnLogin: Button? = null
-    var btnRegister: Button? = null
+    private var btnLogin: Button? = null
+    private var btnRegister: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

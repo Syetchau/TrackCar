@@ -8,6 +8,10 @@
     <string name="login_now">Login Now</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="not_register">Not Register? click Here</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="demo">Demo Project</string>
+    <string name="click_to_view_map">Click to view Google Map</string>
 
     <string name="username">Username : </string>
     <string name="email">Email : </string>
